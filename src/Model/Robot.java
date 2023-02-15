@@ -1,3 +1,5 @@
+package src.Model;
+
 public class Robot {
     private Position position;
     private Direction direction;
