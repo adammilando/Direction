@@ -1,6 +1,7 @@
 public class Robot {
     private Position position;
     private Direction direction;
+    private char command;
 
     public Robot(Position position,Direction direction){
         this.position = position;
@@ -39,6 +40,7 @@ public class Robot {
         }
     }
     public void move(char command){
+        this.command = command;
         switch (command){
             case 'A':
                 position.move(direction);
@@ -53,6 +55,6 @@ public class Robot {
     }
 
     public void tampil(){
-        System.out.println("("+position.getX()+","+position.getY()+")");
+        System.out.println(command+" -> ("+position.getX()+","+position.getY()+")");
     }
 }
